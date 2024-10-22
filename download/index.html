@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download APK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      window.onload = function () {
+        const apkUrl = "../apk/ak_easy_player_1.0.apk";
+        const fileName = "ak_easy_player_1.0.apk";
+        const link = document.createElement("a");
+        link.href = apkUrl;
+        link.download = fileName;
+        link.click();
+
+        setTimeout(() => {
+          alert(
+            "ဒေါင်းလုပ်ပြီးပါက အဆိုပါ အက်ပလီကေးရှင်းကို Installတပ်ဆင်ပါ။ \\Install လမ်းညွှန်ကို ကြည့်ရန် 'OK' ဟု နှိပ်ပါ။"
+          );
+          document.getElementById("install-guide").classList.remove("hidden");
+        }, 2000);
+      };
+    </script>
+  </head>
+  <body
+    class="bg-blue-50 flex items-center justify-center h-screen text-center"
+  >
+    <div class="p-8 bg-white shadow-lg rounded-lg">
+      <h1 class="text-4xl font-bold text-blue-800 mb-4">Download Started</h1>
+      <p class="text-lg text-blue-700 mb-6">
+        Your APK download will begin automatically. If it doesn't, you can
+        manually download the APK below.
+      </p>
+
+      <a
+        href="../apk/ak_easy_player_1.0.apk"
+        target="_blank"
+        download="ak_easy_player_1.0.apk"
+        class="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white py-3 px-8 rounded-full text-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+      >
+        APK ဖိုင်ဒေါင်းလုပ်လုပ်ရန်
+      </a>
+
+      <div id="install-guide" class="mt-8 hidden">
+        <h2 class="text-2xl font-semibold text-blue-800 mb-4">
+          Installation Guide
+        </h2>
+        <p class="text-lg text-blue-700 mb-2">
+          Please follow the instructions below:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+            <img
+              src="../images/ins_ss2.png"
+              alt="Install Step 1"
+              class="w-full rounded-md mb-2"
+            />
+            <p class="text-center text-sm text-gray-600">
+              Install Step 1: Open the APK file.
+            </p>
+          </div>
+          <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+            <img
+              src="../images/ins_ss1.png"
+              alt="Install Step 2"
+              class="w-full rounded-md mb-2"
+            />
+            <p class="text-center text-sm text-gray-600">
+              Install Step 2: Follow the on-screen instructions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
